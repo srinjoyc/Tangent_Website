@@ -7287,6 +7287,8 @@ or the section with padding top more than header's height */
 
 .colored-box {
 	padding:45px 15px 40px;
+	height:300px;
+	text-align:center;
 	color:#fff;
 }
 
@@ -16108,4 +16110,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		background-size: 412px 300px;
 	}
 	/* End patterns */
+}
+
+/* Changed CSS Settings */
+#content > div.page-top.bg-dark.pattern31 {
+	margin-bottom: 0px;
 }
