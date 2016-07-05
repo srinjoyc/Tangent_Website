@@ -46,11 +46,11 @@ if($_POST) {
             // if we have no validation errors prepare mail
             $mail = new PHPMailer;
             $mail->isSMTP();
-            $mail->SMTPDebug = 0;
+            $mail->SMTPDebug = 2;
             $mail->Debugoutput = 'html';
 
             //Set the hostname of the mail server gmail - yandex- outlook or your hosting's
-            $mail->Host = "smtp.gmail.com"; // <------------ change with your host name
+            $mail->Host = "localhost"; // <------------ change with your host name
             // use
             // $mail->Host = gethostbyname('smtp.gmail.com');
             // if your network does not support SMTP over IPv6
@@ -65,16 +65,16 @@ if($_POST) {
             $mail->SMTPAuth = true;
 
             //Username to use for SMTP authentication - use full email address for gmail
-            $mail->Username = "YOUR_USERNAME_HERE"; // <------------ Smtp authentication - username here
+            $mail->Username = "srinjoycal@gmail.com"; // <------------ Smtp authentication - username here
 
             //Password to use for SMTP authentication
-            $mail->Password = "YOUR_PASSWORD_HERE"; // <------------ Smtp authentication -password here
+            $mail->Password = "Hiddencreek!"; // <------------ Smtp authentication -password here
 
             $mail->setFrom($email, $name);
             $mail->AddReplyTo($email,$name);
 
             //Set who the message is to be sent to --- CHANGE THIS EMAIL ADDDRES WITH THE ONE YOU WANT TO RECEIVE EMAILS AND WWIT YOUR NAME
-            $mail->addAddress('EMAIL_ADDRESS_YOU_WANTTO_RECEIVE_MESSAGES', 'YOUR_NAME'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
+            $mail->addAddress('srinjoycal@gmail.com', 'SrinjoyChakraborty'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
 
             $mail->Subject = $subject;
             $mail->msgHTML($message);
